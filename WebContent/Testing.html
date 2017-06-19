@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+   
+    <script language="javascript">
+       function TodoCtrl($scope){
+   	     $scope.totalTodos = 4;
+       }
+       
+       function personController($scope) {
+    	    $scope.firstName= "John";
+    	    $scope.lastName= "Doe";
+    	}
+    </script>  
+    
+    </head>
+  <body>
+     <div ng-controller="TodoCtrl"> </div>
+     {{totalTodos}}
+     
+     <p> Try to change the names </p>
+      <div  ng-controller="personController">
+      First Name <input type="text" ng-model="firstName" >
+      <hr>
+      Second Name <input type="text" ng-model="lastName" >
+      <hr>
+      <hr>
+      Full Name : {{firstName + "" + lastName}}
+    </div>
+     
+     
+     
+  </body>
+</html>
